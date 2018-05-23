@@ -1,8 +1,8 @@
 # -- Simulation dependent settings --
 
-set(WITH_PARALLEL               OFF)
+set(WITH_PARALLEL               ON)
 set(WITH_PNG                    OFF)
-set(WITH_HDF5                   ON)
+set(WITH_HDF5                   OFF)
 set(WITH_ASYNC_IO               OFF)
 set(WITH_CHOMBO                 OFF)
 
@@ -29,13 +29,11 @@ set(WITH_GLM                    OFF)
 
 
 # Executable output location
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY /Users/ayw/lab/AGN_Feedback/Accretion/wind)
-#set(CMAKE_RUNTIME_OUTPUT_DIRECTORY /Users/ayw/lab/AGN_Feedback/IC5063)
-#set(CMAKE_RUNTIME_OUTPUT_DIRECTORY /Users/ayw/lab/AGN_Feedback/Outflow)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY /home/toulouse1NS/cielo/pluto-outflows/bin_test2D)
 
 # New files
 set(NEW_FILES
-        accretion.c
+        accretion.c 
         accretion.h
         clouds.c
         clouds.h
@@ -53,7 +51,6 @@ set(NEW_FILES
         io_tools.c
         io_tools.h
         macros_usr.h
-        mean_mol_weight.c
         multicloud_init.c
         multicloud_init.h
         outflow.c
@@ -76,6 +73,7 @@ set(NEW_FILES
 # Overridden files
 set(OVERRIDE_FILES
         cmd_line_opt.c
+        mean_mol_weight.c
         input_data.c
         jet_domain.c
         main.c

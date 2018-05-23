@@ -5,14 +5,14 @@ project(PLUTO)
 # ______________________________________________________________________________________________________________________
 # Set these
 
-set(PROBLEM                     DynamicalFriction)
+set(PROBLEM                     Outflows)
 set(PROBLEM_TYPE                Real)
 
 
 # ______________________________________________________________________________________________________________________
 # PLUTO settings
 
-set(PLUTO_SOURCE_DIR            /Users/ayw/dev/PLUTO)
+set(PLUTO_SOURCE_DIR            /home/toulouse1NS/cielo/pluto-outflows)
 
 # -- Library paths --
 
@@ -22,8 +22,8 @@ set(HDF5_PATH_SER ${PLUTO_SOURCE_DIR}/Lib/hdf5-serial)
 # -- Compilers --
 
 set(WITH_C_COMPILER /usr/bin/gcc)
-set(WITH_MPI_COMPILER /usr/local/bin/mpicc)
-set(WITH_MPIXX_COMPILER /usr/local/bin/mpicxx)
+set(WITH_MPI_COMPILER /home/toulouse1NS/cielo/software/yt/yt-conda/bin/mpicc)
+set(WITH_MPIXX_COMPILER /home/toulouse1NS/cielo/software/yt/yt-conda/bin/mpicxx)
 
 
 # ______________________________________________________________________________________________________________________
