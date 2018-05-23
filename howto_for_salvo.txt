@@ -1,0 +1,16 @@
+TO INSTALL
+1. Follow user guide for hdf5 and CHOMBO
+2. Change CMakeList.txt in the root folder (PATHS)
+
+TO SET UP PROBLEM
+0. Start from a directory in Real_Problems or Test_problems (Outdflows)
+1. Edit CMakeLists.txt in there (PARALLEL, PHYSICS)
+2. Edit definitions.h      (things have to match with CMakeLists; PLUTO's stuff + listing user_def parameters)
+3. Edit definitions_usr.h  (Editing the problem-specific parameters; e.g. DUMPING VS PRIMITIVE)
+4. Set pluto.ini           (straighforward runtime parameters #PAR_OXXX are for outflows, #PAR_HXXX for hot halo, ...)
+5. cmake .
+6. make -j 
+7. link pluto.ini in binary folder
+
+THINGS THAT CAME OUT
+userdef_output.c - controls output fields, the ChangeDumpVar is output-specific; may give some trouble
