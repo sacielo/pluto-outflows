@@ -1,5 +1,11 @@
 TO INSTALL
 1. Follow user guide for hdf5 and CHOMBO
+   We used hdf5-1.8.13 and CHOMBO original:
+      svn --username username co -r21668 https://anag-repo.lbl.gov/svn/Chombo/release/3.2 Chombo-3.2      
+   because all newer patches broke it. Also, cmake 3.5 and 3.6 DON'T WORK!! 3.9 does. 
+   As well as the make_all_chombo.sh (slightly different from Alex's).
+   On occigen I am using gnu/6.0.2 opempi cmake/3.9.0
+
 2. Change CMakeList.txt in the root folder (PATHS)
 
 TO SET UP PROBLEM
@@ -8,7 +14,7 @@ TO SET UP PROBLEM
 2. Edit definitions.h      (things have to match with CMakeLists; PLUTO's stuff + listing user_def parameters)
 3. Edit definitions_usr.h  (Editing the problem-specific parameters; e.g. DUMPING VS PRIMITIVE)
 4. Set pluto.ini           (straighforward runtime parameters #PAR_OXXX are for outflows, #PAR_HXXX for hot halo, ...)
-5. cmake .
+5. rm CMakeFiles -rf; cmake .
 6. make -j 
 7. link pluto.ini in binary folder
 
